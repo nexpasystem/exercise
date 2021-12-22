@@ -43,4 +43,17 @@ public class StringTest {
         assertThat(split[0]).isEqualTo("haedoang");
     }
 
+    @Test
+    @DisplayName("String substring")
+    public void substring() {
+        // given
+        String str = "haedoang@gmail.com";
+
+        // when
+        String substring = str.substring(0, str.indexOf("@"));
+
+        // then
+        assertThat(substring).isEqualTo("haedoang");
+    }
+
 }
