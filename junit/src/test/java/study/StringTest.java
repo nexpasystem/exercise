@@ -29,4 +29,18 @@ public class StringTest {
         assertThat(case1).isTrue();
         assertThat(case2).isFalse();
     }
+
+    @Test
+    @DisplayName("String split")
+    public void split() {
+        // given
+        String str = "haedoang@gmail.com";
+
+        // when
+        String[] split = str.split("@");
+
+        // then
+        assertThat(split[0]).isEqualTo("haedoang");
+    }
+
 }
